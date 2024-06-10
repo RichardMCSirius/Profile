@@ -1,7 +1,7 @@
 :root {
   /* Definición de colores y fuentes para facilitar cambios futuros */
   --main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --link-color: black;
+  --link-color: #195def;
   --link-hover-color: blue;
   --footer-bg-color: #f0f0f0;
   --body-margin: 2;
