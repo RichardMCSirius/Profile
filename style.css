@@ -1,35 +1,64 @@
+:root {
+  /* Definición de colores y fuentes para facilitar cambios futuros */
+  --main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --link-color: black;
+  --link-hover-color: blue;
+  --footer-bg-color: #f0f0f0;
+  --body-margin: 0;
+  --nav-margin-right: 20px;
+  --main-padding: 20px;
+  --section-margin-bottom: 20px;
+}
+
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: var(--main-font);
+  margin: var(--body-margin);
+  padding: var(--body-margin);
 }
 
 nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: var(--body-margin);
+  padding: var(--body-margin);
 }
 
 nav li {
   display: inline;
-  margin-right: 20px;
+  margin-right: var(--nav-margin-right);
+}
+
+/* Mejora de navegación para dispositivos móviles */
+@media (max-width: 600px) {
+  nav li {
+    display: block;
+    margin-right: var(--body-margin);
+  }
 }
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: var(--link-color);
+}
+
+/* Estilos de enlace activo y hover */
+nav a:active,
+nav a:hover {
+  color: var(--link-hover-color);
 }
 
 main {
-  padding: 20px;
+  padding: var(--main-padding);
 }
 
 section {
-  margin-bottom: 20px;
+  margin-bottom: var(--section-margin-bottom);
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #f0f0f0;
+  padding: var(--main-padding);
+  background-color: var(--footer-bg-color);
+  position: fixed; /* Mantener el pie de página en la parte inferior */
+  bottom: 0;
+  width: 100%;
 }
